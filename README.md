@@ -4,7 +4,7 @@ A web-based IT asset tracking application built to help IT teams maintain clear 
 
 ## Overview
 
-In many organizations, asset information is often scattered across spreadsheets, emails, and manual records. This project centralizes key asset details into a simple dashboard interface, making it easier to manage devices, monitor ownership, and track operational status efficiently.
+In many organizations, asset information is often scattered across spreadsheets, emails, and manual records. This project centralizes key asset details into a dashboard interface, making it easier to manage devices, monitor ownership, and track operational status efficiently.
 
 ## Key Features
 
@@ -14,7 +14,11 @@ In many organizations, asset information is often scattered across spreadsheets,
 - Monitor warranty expiry information
 - Manage lifecycle stages such as In Use, In Stock, Repair, and Retired
 - Search and filter records for faster tracking
-- Improve inventory visibility through a simple dashboard layout
+- Improve inventory visibility through a dashboard-based layout
+
+## Dashboard File
+
+The primary dashboard interface is included in `index.html`, which is used to display and manage IT asset records in a structured format.
 
 ## Business Use Case
 
@@ -36,6 +40,7 @@ This project is useful for:
 ```bash
 it-asset-tracker/
 ├── index.html
+├── Asset-Dashboard.html
 ├── style.css
 ├── script.js
 ├── assets/
@@ -43,6 +48,13 @@ it-asset-tracker/
 │   └── screenshot-2.png
 └── README.md
 ```
+
+## How to Run
+
+1. Clone or download the repository
+2. Open `index.html` in your browser
+
+If the dashboard is maintained separately, you can also open `Asset-Dashboard.html` directly in your browser.
 
 ## Future Enhancements
 
