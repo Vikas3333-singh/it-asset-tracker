@@ -1,29 +1,29 @@
 # IT Asset Tracker
 
-A simple IT asset tracking project to manage laptops, desktops, assigned users, departments, locations, warranty details, and asset lifecycle status in one place.
+A web-based IT asset tracking project designed to help IT teams maintain clear visibility of devices, ownership, warranty status, and lifecycle stage in one place.
 
-## Problem It Solves
+## Overview
 
-In many IT support teams, asset records are scattered across Excel sheets, emails, and manual notes. This project helps organize asset information in one dashboard so IT teams can quickly check ownership, device type, status, and warranty.
+In many organisations, asset information is often scattered across spreadsheets, emails, and manual records. This project centralises key asset details into a simple dashboard interface, making it easier to manage devices and track their operational status.
 
-## Features
+## Key Features
 
-- Add and view IT assets
-- Track assigned employee or owner
-- Store serial number and asset ID
-- Track location and department
-- Check warranty expiry status
-- View lifecycle stage such as In Use, In Stock, Repair, Retired
-- Search and filter assets quickly
-- Simple dashboard-style interface
+- Add and view IT assets in a centralised interface
+- Track assigned users, departments, and locations
+- Store asset ID and serial number details
+- Monitor warranty expiry information
+- Manage lifecycle stages such as In Use, In Stock, Repair, and Retired
+- Search and filter assets for faster tracking
+- Use a dashboard-style layout for quick visibility
 
-## Use Case
+## Business Use Case
 
 This project is useful for:
-- IT support teams
-- Asset management teams
-- Endpoint support engineers
-- Small organizations managing devices manually
+
+- IT support teams managing end-user devices
+- Asset management teams maintaining inventory records
+- Endpoint support engineers tracking ownership and warranty
+- Small and mid-sized organisations handling assets manually
 
 ## Tech Stack
 
@@ -35,7 +35,6 @@ This project is useful for:
 
 ```bash
 it-asset-tracker/
-│
 ├── index.html
 ├── style.css
 ├── script.js
@@ -45,20 +44,15 @@ it-asset-tracker/
 └── README.md
 ```
 
-## Future Improvements
+## Future Enhancements
 
-- Add local storage or database support
-- Add export to CSV
-- Add login-based asset access
-- Add barcode or QR asset lookup
-- Add service history tracking
-- Add warranty alerts
+- Add persistent storage using local storage or a database
+- Export asset records to CSV
+- Introduce login-based access control
+- Add barcode or QR-based asset lookup
+- Track service and maintenance history
+- Enable warranty expiry alerts
 
 ## Why I Built This
 
-I built this project to demonstrate practical skills related to IT asset lifecycle management, endpoint support, and internal IT operations. It reflects real-world support work such as tracking assigned devices, monitoring warranty, and maintaining asset visibility.
-
-## Author
-
-**Vikas Singh**  
-IT Support Engineer | Endpoint & Remote Desktop Support | ITSM, SLA & Asset Management
+I built this project to demonstrate practical knowledge of IT asset lifecycle management and endpoint support operations. It reflects real-world scenarios such as tracking device allocation, maintaining inventory visibility, and monitoring warranty coverage across IT assets.
