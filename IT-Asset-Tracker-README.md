@@ -145,5 +145,6 @@ This tool was built to solve that specific problem — load the files you alread
 
 ## Screenshots
 
-*Add screenshots to `assets/screenshots/` and link them here.*
+*Add screenshots to `assets/screenshots<img width="1889" height="898" alt="Screenshot 2026-08-30 120647" src="https://github.com/user-attachments/assets/fe7ed9dc-6e43-4167-8477-d14ec0783f92" />
+/` and link them here.*
 
