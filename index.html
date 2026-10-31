@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vikas Singh — End-user support engineer who builds internal tools</title>
-<meta name="description" content="Vikas Singh builds small internal tools that cut support load and give IT teams visibility. 11+ years in end-user support. Based in India.">
+<title>IT Asset Tracker Dashboard — project overview</title>
+<meta name="description" content="IT Asset Tracker Dashboard: a browser-based tool that turns scattered Excel asset files into one live dashboard. No backend, no migration.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
@@ -113,63 +113,69 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 }
 @media(max-width:520px){.kpis{grid-template-columns:1fr 1fr}.panels{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+.intro{padding:clamp(48px,7vw,80px) 0 40px}
+.intro h1{font-size:clamp(2.25rem,1.2rem + 3.6vw,3.75rem);margin-bottom:16px}
+.intro .sub{font-size:1.1875rem;color:var(--mute);margin-bottom:8px}
+.qs{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:8px}
+.qs li{padding:14px 0;border-top:1px solid var(--line)}
+@media(max-width:860px){.qs{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px 0}
+.chips button{font:inherit;font-size:.8125rem;padding:4px 12px;border-radius:999px;border:1px solid #2f3b45;background:none;color:#b9c4cb;cursor:pointer}
+.chips button:hover{border-color:#5fb7bf}
+.chips button[aria-pressed=true]{background:#5fb7bf;border-color:#5fb7bf;color:#0e161b;font-weight:600}
+.track i{transition:width .35s ease}.kpi b{transition:opacity .2s}
+.limits{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.limits h3{font-size:1.25rem;margin-bottom:12px}
+.limits ul{list-style:none}.limits li{padding:14px 0;border-top:1px solid var(--line);color:var(--mute);font-size:.9375rem}.limits li b{color:var(--ink);font-weight:600}
+@media(max-width:860px){.limits{grid-template-columns:1fr;gap:32px}}
 </style>
 </head>
 <body>
-<header><div class="wrap bar">
-  <a class="brand" href="#top">Vikas Singh</a>
-  <nav>
-    <a href="#project">Project</a><a href="#tools">More tools</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-    <button id="theme" type="button" aria-label="Toggle color theme">Theme</button>
-  </nav>
-</div></header>
-
-<main id="top">
-<div class="wrap hero">
-  <div>
-    <h1>I build the internal tools support teams actually use.</h1>
-    <p class="sub">End-user support engineer turning spreadsheets and repetitive fixes into small tools that work on day one. No setup, no migration, no backend.</p>
-    <div class="btns">
-      <a class="btn pri" href="#project">See the featured project</a>
-      <a class="btn" href="https://github.com/Vikas3333-singh" target="_blank" rel="noopener noreferrer">GitHub</a>
-    </div>
-    <div class="facts">
-      <span><b>11+ years</b> in end-user support</span>
-      <span><b>~35%</b> fewer L1 tickets in month one</span>
-      <span><b>100%</b> in the browser, works offline</span>
-    </div>
+<main>
+<div class="wrap intro">
+  <h1>IT Asset Tracker Dashboard</h1>
+  <p class="sub">A browser-based tool that turns the Excel files your IT team already has into one live asset dashboard.</p>
+  <p class="mute">Built for real operational use at Femmella Fashions. It is a single HTML file: nothing to install, no backend, no data migration. Your data stays on your machine.</p>
+</div>
+<div class="wrap" style="padding-bottom:56px">
+    <div class="dash" aria-label="Interactive preview of the IT Asset Tracker dashboard with sample data">
+  <div class="dash-top"><i></i><i></i><i></i><span>Asset-Dashboard.html</span></div>
+  <div class="chips" role="group" aria-label="Filter by status">
+    <button type="button" data-f="all" aria-pressed="true">All assets</button>
+    <button type="button" data-f="assigned" aria-pressed="false">Assigned</button>
+    <button type="button" data-f="stock" aria-pressed="false">In stock</button>
+    <button type="button" data-f="repair" aria-pressed="false">In repair</button>
   </div>
-  <div>
-    <div class="dash" role="img" aria-label="Preview of the IT Asset Tracker dashboard with sample data">
-      <div class="dash-top"><i></i><i></i><i></i><span>Asset-Dashboard.html</span></div>
-      <div class="kpis">
-        <div class="kpi"><b>1,247</b><small>Total assets</small></div>
-        <div class="kpi"><b>892</b><small>Assigned</small></div>
-        <div class="kpi"><b>43</b><small>In repair</small></div>
-        <div class="kpi"><b>312</b><small>In stock</small></div>
-      </div>
-      <div class="panels">
-        <div class="panel"><h3>Assets by department</h3>
-          <div class="row"><span>Retail</span><div class="track"><i style="width:100%"></i></div><span>310</span></div>
-          <div class="row"><span>Design</span><div class="track"><i style="width:77%"></i></div><span>240</span></div>
-          <div class="row"><span>Sales</span><div class="track"><i style="width:68%"></i></div><span>210</span></div>
-          <div class="row"><span>IT</span><div class="track"><i style="width:67%"></i></div><span>207</span></div>
-          <div class="row"><span>Finance</span><div class="track"><i style="width:52%"></i></div><span>160</span></div>
-          <div class="row"><span>HR</span><div class="track"><i style="width:39%"></i></div><span>120</span></div>
-        </div>
-        <div class="panel"><h3>Status</h3>
-          <div class="donut"></div>
-          <div class="leg"><span><i style="background:#3fcf8e"></i>Assigned 71.5%</span><span><i style="background:#a78bfa"></i>In stock 25%</span><span><i style="background:#f5b94a"></i>Repair 3.4%</span></div>
-        </div>
-      </div>
+  <div class="kpis" aria-live="polite">
+    <div class="kpi"><b id="k-t">1,247</b><small>Total assets</small></div>
+    <div class="kpi"><b id="k-a">892</b><small>Assigned</small></div>
+    <div class="kpi"><b id="k-r">43</b><small>In repair</small></div>
+    <div class="kpi"><b id="k-s">312</b><small>In stock</small></div>
+  </div>
+  <div class="panels">
+    <div class="panel"><h3>Assets by department</h3><div id="bars"><div class="row"><span>Retail</span><div class="track"><i style="width:100%"></i></div><span>310</span></div><div class="row"><span>Design</span><div class="track"><i style="width:77%"></i></div><span>240</span></div><div class="row"><span>Sales</span><div class="track"><i style="width:68%"></i></div><span>210</span></div><div class="row"><span>IT</span><div class="track"><i style="width:67%"></i></div><span>207</span></div><div class="row"><span>Finance</span><div class="track"><i style="width:52%"></i></div><span>160</span></div><div class="row"><span>HR</span><div class="track"><i style="width:39%"></i></div><span>120</span></div></div></div>
+    <div class="panel"><h3>Status</h3>
+      <div class="donut" id="donut"></div>
+      <div class="leg"><span><i style="background:#3fcf8e"></i><em id="l-a">Assigned 71.5%</em></span><span><i style="background:#a78bfa"></i><em id="l-s">In stock 25.0%</em></span><span><i style="background:#f5b94a"></i><em id="l-r">Repair 3.4%</em></span></div>
     </div>
-    <p class="note">Sample data. The real tool runs on your own Excel files.</p>
   </div>
 </div>
-
+<p class="note">Sample data. Click a status: KPIs and charts update together, like the real tool does when you filter.</p>
+</div>
+<section><div class="wrap">
+  <h2>What it answers in seconds</h2>
+  <p class="lead">The questions that used to need several spreadsheets and a few phone calls.</p>
+  <ul class="qs">
+    <li>Who has this laptop?</li>
+    <li>What is in stock right now?</li>
+    <li>How many devices are in repair?</li>
+    <li>Which department holds the most assets?</li>
+  </ul>
+</div></section>
 <section id="project"><div class="wrap">
-  <h2>IT Asset Tracker dashboard</h2>
-  <p class="lead">A browser-based asset dashboard built for real operational use at Femmella Fashions. Upload the Excel files you already have and see the whole device inventory.</p>
+  <h2>Problem, solution and result</h2>
+  <p class="lead">Why it was built and what changed after it went live.</p>
   <div class="case">
     <h3 class="prob">Problem</h3>
     <div><h4>Asset data was split across Excel files owned by different people</h4>
@@ -190,7 +196,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <li><b>Filter and export</b><span>KPIs and charts follow your filters.</span></li>
   </ol>
 </div></section>
-
 <section><div class="wrap">
   <h2>What it does</h2>
   <p class="lead">Six features that cover the daily questions a support team asks about assets.</p>
@@ -203,58 +208,45 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     <div><dt>Fully offline</dt><dd>No server and no API calls. Data never leaves the machine, and nothing needs installing.</dd></div>
   </dl>
 </div></section>
-
-<section id="tools"><div class="wrap">
-  <h2>More tools I have built</h2>
-  <p class="lead">Same approach in other places: find the repetitive work, automate it, hand it over.</p>
-  <div class="tools">
-    <div class="tool"><h3>Advanced IT troubleshooting utility</h3>
-      <p>Batch-script toolkit that lets end users run common repairs themselves. Adopted into the standard workstation image at a global consulting client.</p><span class="tag">Self-service repair</span></div>
-    <div class="tool"><h3>Lenovo e-ticket automation</h3>
-      <p>Python and Selenium tool that automates raising Lenovo warranty tickets, removing a repetitive manual portal task.</p><span class="tag">Python, Selenium</span></div>
-  </div>
-</div></section>
-
-<section id="skills"><div class="wrap">
-  <h2>Skills</h2>
-  <dl class="skills" style="margin-top:32px">
-    <dt>IT operations</dt><dd>Asset lifecycle, endpoint inventory, incident management, L1 support optimization, ServiceNow</dd>
-    <dt>Endpoint and cloud</dt><dd>Windows Autopilot, Intune, Entra ID, Microsoft 365, CrowdStrike, Teams Rooms</dd>
-    <dt>Building tools</dt><dd>PowerShell, Python, vanilla JavaScript, Chart.js, SheetJS, Excel data processing</dd>
-    <dt>Business</dt><dd>Support process improvement, KPI tracking, dashboard design, business analysis</dd>
-  </dl>
-</div></section>
-
 <section><div class="wrap">
-  <h2>Planned for the tracker</h2>
-  <p class="lead">Not built yet. This is the order I would do it in.</p>
-  <ul class="next">
-    <li><b>Saved data between sessions.</b> Keep loaded files in the browser so nobody re-uploads daily.</li>
-    <li><b>Warranty expiry alerts.</b> Flag assets nearing end of life.</li>
-    <li><b>Maintenance history.</b> Per-asset repair and service log with dates.</li>
-    <li><b>Barcode and QR lookup.</b> Scan an asset tag to open its full record.</li>
-  </ul>
-</div></section>
-
-<section id="contact" class="cta"><div class="wrap">
-  <h2>Need a tool like this built?</h2>
-  <p class="lead">I am open to roles and projects in IT operations, internal tooling and support workflow improvement.</p>
-  <div class="btns">
-    <a class="btn pri" href="https://linkedin.com/in/vikas-singh" target="_blank" rel="noopener noreferrer">Message me on LinkedIn</a>
-    <a class="btn" href="https://github.com/Vikas3333-singh/it-asset-tracker" target="_blank" rel="noopener noreferrer">View the code</a>
+  <h2>Design choices and current limits</h2>
+  <p class="lead">What the no-backend approach buys, and what it costs today.</p>
+  <div class="limits">
+    <div><h3>Why it works this way</h3><ul>
+      <li><b>One HTML file.</b> Nothing to install or approve, so the team could start the same day.</li>
+      <li><b>Runs in the browser.</b> No server and no API calls, so asset data never leaves the machine.</li>
+      <li><b>Reads your existing Excel files.</b> No migration, and nobody has to change how they keep records.</li>
+    </ul></div>
+    <div><h3>What it does not do yet</h3><ul>
+      <li><b>No saved data.</b> Files must be loaded again each session.</li>
+      <li><b>No shared or live data.</b> Each person works on their own loaded copy.</li>
+      <li><b>No warranty alerts, maintenance history or barcode lookup.</b> These are the next planned additions.</li>
+    </ul></div>
   </div>
 </div></section>
 </main>
-
-<footer><div class="wrap"><span>© 2026 Vikas Singh, India</span><span>Plain HTML, CSS and JavaScript</span></div></footer>
-
 <script>
 (function(){
-  var r=document.documentElement,b=document.getElementById('theme'),
-  dark=function(){return r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches};
-  function label(){b.textContent=dark()?'Light mode':'Dark mode'}
-  label();
-  b.addEventListener('click',function(){r.dataset.theme=dark()?'light':'dark';label()});
+var D=[["Retail",220,80,10],["Design",175,58,7],["Sales",150,55,5],["IT",145,55,7],["Finance",115,42,3],["HR",87,22,11]],
+IDX={assigned:1,stock:2,repair:3},$=function(i){return document.getElementById(i)},
+f=function(n){return n.toLocaleString("en-US")};
+function show(k){
+  var S=[0,0,0];D.forEach(function(d){for(var i=0;i<3;i++)S[i]+=d[i+1]});
+  var keep=k==="all"?[1,1,1]:[k==="assigned"?1:0,k==="stock"?1:0,k==="repair"?1:0];
+  var v=S.map(function(x,i){return keep[i]?x:0}),T=v[0]+v[1]+v[2];
+  $("k-t").textContent=f(T);$("k-a").textContent=v[0];$("k-r").textContent=v[2];$("k-s").textContent=v[1];
+  var vals=D.map(function(d){return k==="all"?d[1]+d[2]+d[3]:d[IDX[k]]}),mx=Math.max.apply(null,vals);
+  document.querySelectorAll("#bars .row").forEach(function(r,i){r.querySelector("i").style.width=(vals[i]/mx*100)+"%";r.lastElementChild.textContent=vals[i]});
+  var p=v.map(function(x){return x/T*100});
+  $("donut").style.background="conic-gradient(#3fcf8e 0 "+p[0]+"%,#a78bfa "+p[0]+"% "+(p[0]+p[1])+"%,#f5b94a "+(p[0]+p[1])+"% 100%)";
+  $("l-a").textContent="Assigned "+p[0].toFixed(1)+"%";$("l-s").textContent="In stock "+p[1].toFixed(1)+"%";$("l-r").textContent="Repair "+p[2].toFixed(1)+"%";
+}
+document.querySelectorAll(".chips button").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".chips button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    show(b.dataset.f);
+  });
+});
 })();
 </script>
 </body>
